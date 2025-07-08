@@ -1,0 +1,109 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+/* Layout container */
+.Content-main {
+  display: flex;
+  min-height: calc(100vh - 60px);
+}
+
+/* Sidebar giữ nguyên chiều rộng cố định (giả định từ sidebar.php) */
+.sidebar {
+  flex-shrink: 0; /* Ngăn sidebar co lại */
+}
+
+/* Main content bao phủ toàn bộ phần còn lại */
+.main {
+  flex-grow: 1; /* Chiếm toàn bộ không gian còn lại */
+  margin: 20px;
+}
+
+/* Các phần tử khác trong main */
+.main__control {
+  display: flex;
+}
+
+.main-search {
+  padding: 10px 0;
+}
+
+.button-search {
+  padding: 20px 20px;
+}
+
+.inputSearch, .btnSearch {
+  padding: 10px 10px;
+}
+
+/* Cấu hình cho bảng */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.user {
+  padding: 10px 10px;
+  background-color: rgb(235, 59, 59);
+  color: rgb(13, 13, 13);
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user:hover {
+  opacity: 0.8;
+}
+
+/* Phân trang */
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  padding: 6px 12px;
+  margin: 0 4px;
+  background: #eee;
+  text-decoration: none;
+  color: #333;
+  border-radius: 4px;
+}
+
+.pagination a.active {
+  background-color: #007bff;
+  color: white;
+}
